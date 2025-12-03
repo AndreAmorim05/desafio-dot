@@ -10,5 +10,14 @@ annotation __PBI_TimeIntelligenceEnabled = 1
 
 annotation PBI_ProTooling = ["DevMode"]
 
+annotation PBI_QueryOrder = ["cursos","inscricoes_marketing","conclusoes"]
+
+ref table cursos
+ref table inscricoes_marketing
+ref table DateTableTemplate_06edac5d-9c11-43d1-b1ca-280f33d87653
+ref table LocalDateTable_9d9d413b-862f-491d-81db-53acb5f6a237
+ref table conclusoes
+ref table LocalDateTable_54fc6813-8a3b-4428-9d25-d27a2af6eb59
+
 ref cultureInfo pt-BR
 

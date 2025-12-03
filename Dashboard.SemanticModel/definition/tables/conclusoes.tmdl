@@ -1,0 +1,40 @@
+table conclusoes
+	lineageTag: 75c6ba15-fbcf-485c-8ba9-95b4f511586b
+
+	column ID_INSCRICAO
+		dataType: int64
+		formatString: 0
+		lineageTag: b5eab296-e435-46bd-8876-a350fda8c876
+		summarizeBy: sum
+		sourceColumn: ID_INSCRICAO
+
+		annotation SummarizationSetBy = Automatic
+
+	column DATA_CONCLUSAO
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: ae8769a4-67cd-4140-9244-d71013428f48
+		summarizeBy: none
+		sourceColumn: DATA_CONCLUSAO
+
+		variation Variation
+			isDefault
+			relationship: 9afb5430-18bb-4a93-9746-ac4052d6245e
+			defaultHierarchy: LocalDateTable_54fc6813-8a3b-4428-9d25-d27a2af6eb59.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	partition conclusoes = m
+		mode: import
+		source =
+				let
+				    Fonte = Csv.Document(File.Contents("H:\Meu Drive\PROJETOS\DESAFIOS\Dot\desafio-dot\dados\conclusoes.csv"),[Delimiter=",", Columns=2, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"ID_INSCRICAO", Int64.Type}, {"DATA_CONCLUSAO", type date}})
+				in
+				    #"Tipo Alterado"
+
+	annotation PBI_ResultType = Table
+

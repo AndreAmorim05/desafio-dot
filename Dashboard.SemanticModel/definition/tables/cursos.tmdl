@@ -1,0 +1,40 @@
+table cursos
+	lineageTag: 1542fdd2-2f36-4105-a9ab-fe0ddcd576e6
+
+	column ID_CURSO
+		dataType: int64
+		formatString: 0
+		lineageTag: 216ebf31-73ab-489d-ae8b-c5cb4b9d11d5
+		summarizeBy: none
+		sourceColumn: ID_CURSO
+
+		annotation SummarizationSetBy = Automatic
+
+	column NOME_CURSO
+		dataType: string
+		lineageTag: dd453dc9-50a0-4dca-8fe9-32195fb2db25
+		summarizeBy: none
+		sourceColumn: NOME_CURSO
+
+		annotation SummarizationSetBy = Automatic
+
+	column CATEGORIA_CURSO
+		dataType: string
+		lineageTag: 2279e1eb-0de7-4218-832a-9943dc904a21
+		summarizeBy: none
+		sourceColumn: CATEGORIA_CURSO
+
+		annotation SummarizationSetBy = Automatic
+
+	partition cursos = m
+		mode: import
+		source =
+				let
+				    Fonte = Csv.Document(File.Contents("H:\Meu Drive\PROJETOS\DESAFIOS\Dot\desafio-dot\dados\cursos.csv"),[Delimiter=",", Columns=3, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"ID_CURSO", Int64.Type}, {"NOME_CURSO", type text}, {"CATEGORIA_CURSO", type text}})
+				in
+				    #"Tipo Alterado"
+
+	annotation PBI_ResultType = Table
+
