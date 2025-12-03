@@ -49,14 +49,6 @@ table _Medidas
 
 		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
 
-	measure Top_Categori_Curso =
-			RANKX(
-			    ALLSELECTED(cursos[CATEGORIA_CURSO]),
-			    [VLR_Receita],,DESC
-			)
-		formatString: 0
-		lineageTag: 84b612c9-9d71-4636-ad01-8fbc399ac984
-
 	measure VLR_Receita_Concluidos =
 			CALCULATE(
 			    SUM(inscricoes_marketing[PRECO_PAGO]),
@@ -74,6 +66,16 @@ table _Medidas
 		lineageTag: 6bedc32a-e29f-4a52-ae05-6f533208becf
 
 		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure Variacao_Receita_MoM =
+			
+			VAR __PREV_MONTH = CALCULATE([VLR_Receita], PARALLELPERIOD('calendario'[Data], -1, MONTH))
+			RETURN
+			    DIVIDE([VLR_Receita] - __PREV_MONTH, __PREV_MONTH)
+		displayFolder: Taxas
+		lineageTag: 296b180b-c25c-49bc-8756-ddf8704c62bd
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	partition _Medidas = m
 		mode: import

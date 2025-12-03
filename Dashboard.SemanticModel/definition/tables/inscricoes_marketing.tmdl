@@ -63,12 +63,6 @@ table inscricoes_marketing
 
 		annotation SummarizationSetBy = Automatic
 
-	column _INSCRICOES_ALUNOS_CURSOS = [ID_INSCRICAO] & "-" & [ID_ALUNO] & "-" & [ID_CURSO]
-		lineageTag: 13eee1f1-8147-4151-a908-242b394cedc3
-		summarizeBy: none
-
-		annotation SummarizationSetBy = Automatic
-
 	partition inscricoes_marketing = m
 		mode: import
 		queryGroup: Fatos

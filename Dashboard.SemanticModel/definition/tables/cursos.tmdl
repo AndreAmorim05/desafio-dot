@@ -26,6 +26,27 @@ table cursos
 
 		annotation SummarizationSetBy = Automatic
 
+	column RANKING_CURSO =
+			
+			RANKX(
+			    ALL(cursos[ID_CURSO]),
+			    SUMX(
+			        FILTER(
+			            inscricoes_marketing,
+			            inscricoes_marketing[ID_CURSO] = EARLIER(cursos[ID_CURSO])
+			        ),
+			        inscricoes_marketing[PRECO_PAGO]
+			    ),
+			    ,
+			    DESC,
+			    DENSE
+			)
+		formatString: 0
+		lineageTag: f4610e3c-eba4-4338-86d1-cad017d99038
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
 	partition cursos = m
 		mode: import
 		queryGroup: Dimensões

@@ -1126,36 +1126,6 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "inscricoes_marketing.inscricoes_alunos_curso": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "inscricoes_marketing",
-			          "ConceptualProperty": "_INSCRICOES_ALUNOS_CURSOS"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "inscricoes alunos curso": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "inscricoe aluno curso": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.78
-			          }
-			        },
-			        {
-			          "_INSCRICOES_ALUNOS_CURSOS": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        }
-			      ]
-			    },
 			    "conclusoe": {
 			      "Definition": {
 			        "Binding": {
@@ -2121,16 +2091,6 @@ cultureInfo pt-BR
 			            },
 			            "Weight": 0.9
 			          }
-			        },
-			        {
-			          "Inscrições Efetivas": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
 			        }
 			      ]
 			    },
@@ -2353,89 +2313,6 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "entity__medida.top_categori_curso": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "_Medidas",
-			          "ConceptualProperty": "Top_Categori_Curso"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "top categori curso": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "Top_Categori_Curso": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "best categori curso": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.591
-			          }
-			        },
-			        {
-			          "first categori curso": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.591
-			          }
-			        },
-			        {
-			          "leading categori curso": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.591
-			          }
-			        },
-			        {
-			          "maximum categori curso": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.591
-			          }
-			        },
-			        {
-			          "peak categori curso": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.591
-			          }
-			        },
-			        {
-			          "upper categori curso": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.591
-			          }
-			        }
-			      ]
-			    },
 			    "entity__indicadore": {
 			      "Definition": {
 			        "Binding": {
@@ -2541,6 +2418,62 @@ cultureInfo pt-BR
 			        },
 			        {
 			          "VLR_Receita_Concluidos": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.variacao_receita_mo_M": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "Variacao_Receita_MoM"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "variacao receita mo M": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Variacao_Receita_MoM": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "Variação Receita": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "curso.ranking_curso": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "cursos",
+			          "ConceptualProperty": "RANKING_CURSO"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ranking curso": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "RANKING_CURSO": {
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
@@ -3319,6 +3252,72 @@ cultureInfo pt-BR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "cursos_have_inscricoes_marketing"
+			        }
+			      ]
+			    },
+			    "curso_has_ranking_curso": {
+			      "Binding": {
+			        "ConceptualEntity": "cursos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "curso": {
+			          "Target": {
+			            "Entity": "curso"
+			          }
+			        },
+			        "curso.ranking_curso": {
+			          "Target": {
+			            "Entity": "curso.ranking_curso"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "curso"
+			            },
+			            "Object": {
+			              "Role": "curso.ranking_curso"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "cursos_have_ranking_cursos"
+			        }
+			      ]
+			    },
+			    "inscricoes_marketing_has_entity__medida_variacao_receita_mo_M": {
+			      "Binding": {
+			        "ConceptualEntity": "inscricoes_marketing"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "inscricoes_marketing": {
+			          "Target": {
+			            "Entity": "inscricoes_marketing"
+			          }
+			        },
+			        "entity__medida.variacao_receita_mo_M": {
+			          "Target": {
+			            "Entity": "entity__medida.variacao_receita_mo_M"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "inscricoes_marketing"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.variacao_receita_mo_M"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "inscricoes_marketing_have_variacao_receita_mo_M"
 			        }
 			      ]
 			    },
@@ -4190,39 +4189,6 @@ cultureInfo pt-BR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "conclusoes_have_id_inscricaos"
-			        }
-			      ]
-			    },
-			    "inscricoes_marketing_has_inscricoes_alunos_curso": {
-			      "Binding": {
-			        "ConceptualEntity": "inscricoes_marketing"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "inscricoes_marketing": {
-			          "Target": {
-			            "Entity": "inscricoes_marketing"
-			          }
-			        },
-			        "inscricoes_marketing.inscricoes_alunos_curso": {
-			          "Target": {
-			            "Entity": "inscricoes_marketing.inscricoes_alunos_curso"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "inscricoes_marketing"
-			            },
-			            "Object": {
-			              "Role": "inscricoes_marketing.inscricoes_alunos_curso"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "inscricoes_marketing_have_inscricoes_alunos_cursos"
 			        }
 			      ]
 			    },
