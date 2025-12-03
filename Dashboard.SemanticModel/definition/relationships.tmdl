@@ -12,3 +12,8 @@ relationship 9afb5430-18bb-4a93-9746-ac4052d6245e
 	fromColumn: conclusoes.DATA_CONCLUSAO
 	toColumn: LocalDateTable_54fc6813-8a3b-4428-9d25-d27a2af6eb59.Date
 
+relationship d8075ffd-8286-48d5-a93d-0bb84df575d2
+	joinOnDateBehavior: datePartOnly
+	fromColumn: calendario.Data
+	toColumn: LocalDateTable_d3a0e8a0-04a0-45e5-a675-5a3674ed45f4.Date
+

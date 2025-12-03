@@ -28,6 +28,7 @@ table conclusoes
 
 	partition conclusoes = m
 		mode: import
+		queryGroup: Dimensões
 		source =
 				let
 				    Fonte = Csv.Document(File.Contents("H:\Meu Drive\PROJETOS\DESAFIOS\Dot\desafio-dot\dados\conclusoes.csv"),[Delimiter=",", Columns=2, Encoding=1252, QuoteStyle=QuoteStyle.None]),
@@ -37,4 +38,6 @@ table conclusoes
 				    #"Tipo Alterado"
 
 	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navegação
 

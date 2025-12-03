@@ -28,6 +28,7 @@ table cursos
 
 	partition cursos = m
 		mode: import
+		queryGroup: Dimensões
 		source =
 				let
 				    Fonte = Csv.Document(File.Contents("H:\Meu Drive\PROJETOS\DESAFIOS\Dot\desafio-dot\dados\cursos.csv"),[Delimiter=",", Columns=3, Encoding=65001, QuoteStyle=QuoteStyle.None]),
@@ -37,4 +38,6 @@ table cursos
 				    #"Tipo Alterado"
 
 	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navegação
 
