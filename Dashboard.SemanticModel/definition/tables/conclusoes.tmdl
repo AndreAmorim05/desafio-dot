@@ -12,7 +12,7 @@ table conclusoes
 
 	column DATA_CONCLUSAO
 		dataType: dateTime
-		formatString: Long Date
+		formatString: Short Date
 		lineageTag: ae8769a4-67cd-4140-9244-d71013428f48
 		summarizeBy: none
 		sourceColumn: DATA_CONCLUSAO

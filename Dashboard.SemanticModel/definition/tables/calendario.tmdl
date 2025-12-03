@@ -5,7 +5,7 @@ table calendario
 	column Data
 		dataType: dateTime
 		isKey
-		formatString: Long Date
+		formatString: Short Date
 		lineageTag: e7a40b8b-c320-4629-a99a-bb7042f61531
 		summarizeBy: none
 		sourceColumn: Data
@@ -28,6 +28,9 @@ table calendario
 		lineageTag: b0d4d40e-8e98-4766-a710-388157d202d9
 		summarizeBy: none
 		sourceColumn: Nome do Dia
+		sortByColumn: 'Dia da Semana'
+
+		changedProperty = SortByColumn
 
 		annotation SummarizationSetBy = Automatic
 
@@ -36,6 +39,9 @@ table calendario
 		lineageTag: 9bebff06-87a0-4e23-9125-4a196f58ca4c
 		summarizeBy: none
 		sourceColumn: Dia
+		sortByColumn: 'Dia da Semana'
+
+		changedProperty = SortByColumn
 
 		annotation SummarizationSetBy = Automatic
 
@@ -53,6 +59,9 @@ table calendario
 		lineageTag: 6be635f4-8c16-4185-ad64-da059e3f6e74
 		summarizeBy: none
 		sourceColumn: Semana
+		sortByColumn: 'Semana do Ano'
+
+		changedProperty = SortByColumn
 
 		annotation SummarizationSetBy = Automatic
 
@@ -61,6 +70,9 @@ table calendario
 		lineageTag: 96be987e-e21e-4759-8ccd-65f89cb1d087
 		summarizeBy: none
 		sourceColumn: Nome do Mês
+		sortByColumn: 'Num Mês'
+
+		changedProperty = SortByColumn
 
 		annotation SummarizationSetBy = Automatic
 

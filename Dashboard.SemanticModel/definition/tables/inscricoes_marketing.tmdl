@@ -30,7 +30,7 @@ table inscricoes_marketing
 
 	column DATA_INSCRICAO
 		dataType: dateTime
-		formatString: Long Date
+		formatString: Short Date
 		lineageTag: b7d7f370-4faf-44f9-aa52-d7a6fc23d32d
 		summarizeBy: none
 		sourceColumn: DATA_INSCRICAO
@@ -46,12 +46,14 @@ table inscricoes_marketing
 
 	column PRECO_PAGO
 		dataType: decimal
-		formatString: 0
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
 		lineageTag: b3083f96-eecc-4d94-8eda-d5524ceaa24d
 		summarizeBy: sum
 		sourceColumn: PRECO_PAGO
 
 		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
 
 	column CANAL_MARKETING
 		dataType: string
