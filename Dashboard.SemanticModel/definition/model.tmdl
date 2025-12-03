@@ -30,6 +30,7 @@ ref table conclusoes
 ref table LocalDateTable_54fc6813-8a3b-4428-9d25-d27a2af6eb59
 ref table calendario
 ref table _Medidas
+ref table _Indicadores
 
 ref cultureInfo pt-BR
 

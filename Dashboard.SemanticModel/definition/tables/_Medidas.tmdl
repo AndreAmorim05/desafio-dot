@@ -32,12 +32,11 @@ table _Medidas
 		displayFolder: Quantidades
 		lineageTag: 6ec681bc-36cb-4a53-9d21-fb76bbf36c02
 
-	/// Taxa (percentual) de inscrições que foram devidamente concluídas 
+	/// Taxa (percentual) de inscrições que foram devidamente concluídas
 	measure Taxa_Conclusao = DIVIDE([QTD_Inscricoes_Reais], [QTD_Inscricoes], 0)
+		formatString: 0%;-0%;0%
 		displayFolder: Taxas
 		lineageTag: aaeb4317-fa4a-433e-a141-5cef1dea3e84
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	/// Média de quanto cada inscrição gerou de receita
 	measure Ticket_Medio = DIVIDE([VLR_Inscricoes], [QTD_Inscricoes_Reais], 0)
@@ -60,6 +59,14 @@ table _Medidas
 		lineageTag: 498c1973-534e-4393-ad44-dcc194fb3fe3
 
 		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure Top_Categori_Curso =
+			RANKX(
+			    ALLSELECTED(cursos[CATEGORIA_CURSO]),
+			    [VLR_Inscricoes],,DESC
+			)
+		formatString: 0
+		lineageTag: 84b612c9-9d71-4636-ad01-8fbc399ac984
 
 	partition _Medidas = m
 		mode: import

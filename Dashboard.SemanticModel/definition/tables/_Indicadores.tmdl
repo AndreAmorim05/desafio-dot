@@ -1,0 +1,52 @@
+table _Indicadores
+	lineageTag: cadf17ba-bfd5-4784-9c3e-a44b42e1b462
+
+	column _Indicadores
+		lineageTag: 0a51a522-8f1c-493c-9181-1823055a651c
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: '_Indicadores Pedido'
+
+		relatedColumnDetails
+			groupByColumn: '_Indicadores Campos'
+
+		annotation SummarizationSetBy = Automatic
+
+	column '_Indicadores Campos'
+		isHidden
+		lineageTag: e10542bb-d558-461f-b3ac-738500ba8c62
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: '_Indicadores Pedido'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column '_Indicadores Pedido'
+		isHidden
+		formatString: 0
+		lineageTag: def479a6-f3b4-42bb-a678-207aba480dfb
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition _Indicadores = calculated
+		mode: import
+		source =
+				{
+				    ("Receita", NAMEOF('_Medidas'[VLR_Inscricoes]), 0),
+				    ("Ticket Médio", NAMEOF('_Medidas'[Ticket_Medio]), 1),
+				    ("Receita MTD", NAMEOF('_Medidas'[Receita_MTD]), 2),
+				    ("Taxa Conclusão", NAMEOF('_Medidas'[Taxa_Conclusao]), 3),
+				    ("Inscrições Efetivas", NAMEOF('_Medidas'[QTD_Inscricoes_Reais]), 4),
+				    ("Inscrições Totais", NAMEOF('_Medidas'[QTD_Inscricoes]), 5)
+				}
+
+	annotation PBI_Id = f737585b1643435f992cd7787b12ebbf
+

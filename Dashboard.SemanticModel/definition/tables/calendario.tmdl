@@ -102,6 +102,31 @@ table calendario
 
 		annotation SummarizationSetBy = Automatic
 
+	column Trimestre
+		dataType: int64
+		formatString: 0
+		lineageTag: ad924d1b-efa3-496f-882c-46f374526ad1
+		summarizeBy: sum
+		sourceColumn: Trimestre
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Trimestre Texto'
+		dataType: string
+		lineageTag: 1d344e84-bc36-4e8f-aa4a-9712d4b4cb4f
+		summarizeBy: none
+		sourceColumn: Trimestre Texto
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ano-Trimestre
+		dataType: string
+		lineageTag: f0b8aa06-3e24-4b67-a261-5300a2d4e934
+		summarizeBy: none
+		sourceColumn: Ano-Trimestre
+
+		annotation SummarizationSetBy = Automatic
+
 	partition calendario = m
 		mode: import
 		queryGroup: Dimensões
@@ -122,7 +147,10 @@ table calendario
 				    #"Nome do Mês Inserido" = Table.AddColumn(#"Coluna Mesclada Inserida", "Nome do Mês", each Date.MonthName([Data]), type text),
 				    #"Mês Inserido" = Table.AddColumn(#"Nome do Mês Inserido", "Num Mês", each Date.Month([Data]), Int64.Type),
 				    #"Ano Inserido" = Table.AddColumn(#"Mês Inserido", "Ano", each Date.Year([Data]), Int64.Type),
-				    #"Coluna Personalizada Adicionada" = Table.AddColumn(#"Ano Inserido", "Ano-Mês", each Text.Combine({Date.ToText([Data], "yy"), "-", Date.ToText([Data], "MM")}), type text),
+				    #"Trimestre Inserido" = Table.AddColumn(#"Ano Inserido", "Trimestre", each Date.QuarterOfYear([Data]), Int64.Type),
+				    #"Trimestre Formatado" = Table.AddColumn(#"Trimestre Inserido", "Trimestre Texto", each "Trim " & Text.From([Trimestre]), type text),
+				    #"Ano-Trimestre Inserido" = Table.AddColumn(#"Trimestre Formatado", "Ano-Trimestre", each Text.From([Ano]) & "-Trim" & Text.From([Trimestre]), type text),
+				    #"Coluna Personalizada Adicionada" = Table.AddColumn(#"Ano-Trimestre Inserido", "Ano-Mês", each Text.Combine({Date.ToText([Data], "yy"), "-", Date.ToText([Data], "MM")}), type text),
 				    #"Changed Type" = Table.TransformColumnTypes(#"Coluna Personalizada Adicionada",{{"Semana do Ano", Int64.Type}, {"Dia da Semana", Int64.Type}}),
 				    #"Capitalized Each Word" = Table.TransformColumns(#"Changed Type",{{"Nome do Mês", Text.Proper, type text}})
 				in
