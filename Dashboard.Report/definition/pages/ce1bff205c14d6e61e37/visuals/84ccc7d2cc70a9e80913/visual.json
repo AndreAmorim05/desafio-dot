@@ -441,5 +441,37 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "9dd5852be939a05ba0b8"
+  "parentGroupName": "9dd5852be939a05ba0b8",
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "8edfb8c14651020088e7",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "inscricoes_marketing"
+              }
+            },
+            "Property": "CANAL_MARKETING"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "b8f5df621054046cda18",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Medidas"
+              }
+            },
+            "Property": "QTD_Inscricoes"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
 }

@@ -35,11 +35,6 @@ table inscricoes_marketing
 		summarizeBy: none
 		sourceColumn: DATA_INSCRICAO
 
-		variation Variation
-			isDefault
-			relationship: 00346c24-bf2d-4cec-bb22-a49e0ae332e8
-			defaultHierarchy: LocalDateTable_9d9d413b-862f-491d-81db-53acb5f6a237.'Hierarquia de datas'
-
 		annotation SummarizationSetBy = Automatic
 
 		annotation UnderlyingDateTimeDataType = Date

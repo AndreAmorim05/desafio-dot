@@ -6,7 +6,8 @@
     "y": 29.988689220942124,
     "z": 9006,
     "height": 334.4444444444444,
-    "width": 1168.8888888888889
+    "width": 1168.8888888888889,
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "areaChart",
@@ -330,7 +331,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "4993aa009c826d011b22",
+        "name": "a876101862b0019394e9",
         "field": {
           "Column": {
             "Expression": {
@@ -344,7 +345,7 @@
         "type": "Advanced"
       },
       {
-        "name": "e42725e4baa26ae44942",
+        "name": "245bcd21213b2ee0262a",
         "field": {
           "Column": {
             "Expression": {
@@ -356,6 +357,20 @@
           }
         },
         "type": "Categorical"
+      },
+      {
+        "name": "ded221307abab1089863",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Medidas"
+              }
+            },
+            "Property": "VLR_Receita"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

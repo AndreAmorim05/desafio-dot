@@ -1,8 +1,3 @@
-relationship 00346c24-bf2d-4cec-bb22-a49e0ae332e8
-	joinOnDateBehavior: datePartOnly
-	fromColumn: inscricoes_marketing.DATA_INSCRICAO
-	toColumn: LocalDateTable_9d9d413b-862f-491d-81db-53acb5f6a237.Date
-
 relationship AutoDetected_7dd651de-c4b4-49aa-93da-b117b5eaec1a
 	fromColumn: inscricoes_marketing.ID_CURSO
 	toColumn: cursos.ID_CURSO
@@ -12,15 +7,13 @@ relationship 9afb5430-18bb-4a93-9746-ac4052d6245e
 	fromColumn: conclusoes.DATA_CONCLUSAO
 	toColumn: LocalDateTable_54fc6813-8a3b-4428-9d25-d27a2af6eb59.Date
 
-relationship efeb027d-400d-47be-57e0-c470254782c1
-	crossFilteringBehavior: bothDirections
-	fromCardinality: one
-	fromColumn: calendario.Data
-	toColumn: inscricoes_marketing.DATA_INSCRICAO
-
 relationship 1471f8df-2954-bfee-1672-445c6badf1cb
 	crossFilteringBehavior: bothDirections
 	fromCardinality: one
 	fromColumn: conclusoes.ID_INSCRICAO
 	toColumn: inscricoes_marketing.ID_INSCRICAO
+
+relationship a9114cc2-a3a9-8b7c-8ce3-543d6baaef3c
+	fromColumn: inscricoes_marketing.DATA_INSCRICAO
+	toColumn: calendario.Data
 

@@ -6,7 +6,8 @@
     "y": 10.479797979797956,
     "z": 14500,
     "height": 163.48484848484847,
-    "width": 175.49019607843138
+    "width": 175.49019607843138,
+    "tabOrder": 0
   },
   "visual": {
     "visualType": "card",
@@ -120,23 +121,5 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "3f3652ecc640640c369b",
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "2fe3e5060ad201b302d7",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Medidas"
-              }
-            },
-            "Property": "Taxa_Conclusao"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
-  }
+  "parentGroupName": "3f3652ecc640640c369b"
 }

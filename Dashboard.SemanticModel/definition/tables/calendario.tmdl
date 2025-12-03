@@ -18,7 +18,7 @@ table calendario
 		dataType: int64
 		formatString: 0
 		lineageTag: f983932e-92e9-4616-87fc-e70625c46d16
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: Dia da Semana
 
 		annotation SummarizationSetBy = Automatic
@@ -49,7 +49,7 @@ table calendario
 		dataType: int64
 		formatString: 0
 		lineageTag: 104a39c6-125c-4772-85ef-2aa347df7fb1
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: Semana do Ano
 
 		annotation SummarizationSetBy = Automatic
@@ -80,7 +80,7 @@ table calendario
 		dataType: int64
 		formatString: 0
 		lineageTag: 07863aea-d57b-4312-bd69-7c4a038b2cf7
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: Num Mês
 
 		annotation SummarizationSetBy = Automatic
@@ -89,7 +89,7 @@ table calendario
 		dataType: int64
 		formatString: 0
 		lineageTag: 18e73b0b-e84e-47ee-8f3a-19e506bea09d
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: Ano
 
 		annotation SummarizationSetBy = Automatic
@@ -106,7 +106,7 @@ table calendario
 		dataType: int64
 		formatString: 0
 		lineageTag: ad924d1b-efa3-496f-882c-46f374526ad1
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: Trimestre
 
 		annotation SummarizationSetBy = Automatic

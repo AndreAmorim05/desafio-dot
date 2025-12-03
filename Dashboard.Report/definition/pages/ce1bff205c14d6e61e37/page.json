@@ -3,7 +3,7 @@
   "name": "ce1bff205c14d6e61e37",
   "displayName": "Dashboard",
   "displayOption": "ActualSize",
-  "height": 2500,
+  "height": 3000,
   "width": 1280,
   "visualInteractions": [
     {
@@ -35,6 +35,91 @@
       "source": "46eebe729dab0ed67248",
       "target": "84ccc7d2cc70a9e80913",
       "type": "NoFilter"
+    },
+    {
+      "source": "04ac3fc813b36c4a671e",
+      "target": "ea8fef8a05b0a42dd926",
+      "type": "DataFilter"
+    },
+    {
+      "source": "04ac3fc813b36c4a671e",
+      "target": "84ccc7d2cc70a9e80913",
+      "type": "DataFilter"
+    },
+    {
+      "source": "04ac3fc813b36c4a671e",
+      "target": "3d9a1a6ad0d4806b8c6c",
+      "type": "DataFilter"
+    },
+    {
+      "source": "04ac3fc813b36c4a671e",
+      "target": "1494f8a1589dc75307c5",
+      "type": "DataFilter"
+    },
+    {
+      "source": "ea8fef8a05b0a42dd926",
+      "target": "46eebe729dab0ed67248",
+      "type": "DataFilter"
+    },
+    {
+      "source": "ea8fef8a05b0a42dd926",
+      "target": "84ccc7d2cc70a9e80913",
+      "type": "DataFilter"
+    },
+    {
+      "source": "ea8fef8a05b0a42dd926",
+      "target": "3d9a1a6ad0d4806b8c6c",
+      "type": "DataFilter"
+    },
+    {
+      "source": "ea8fef8a05b0a42dd926",
+      "target": "1494f8a1589dc75307c5",
+      "type": "DataFilter"
+    },
+    {
+      "source": "84ccc7d2cc70a9e80913",
+      "target": "ea8fef8a05b0a42dd926",
+      "type": "DataFilter"
+    },
+    {
+      "source": "84ccc7d2cc70a9e80913",
+      "target": "3d9a1a6ad0d4806b8c6c",
+      "type": "DataFilter"
+    },
+    {
+      "source": "84ccc7d2cc70a9e80913",
+      "target": "1494f8a1589dc75307c5",
+      "type": "DataFilter"
+    },
+    {
+      "source": "3d9a1a6ad0d4806b8c6c",
+      "target": "ea8fef8a05b0a42dd926",
+      "type": "DataFilter"
+    },
+    {
+      "source": "3d9a1a6ad0d4806b8c6c",
+      "target": "84ccc7d2cc70a9e80913",
+      "type": "DataFilter"
+    },
+    {
+      "source": "3d9a1a6ad0d4806b8c6c",
+      "target": "1494f8a1589dc75307c5",
+      "type": "DataFilter"
+    },
+    {
+      "source": "1494f8a1589dc75307c5",
+      "target": "3d9a1a6ad0d4806b8c6c",
+      "type": "DataFilter"
+    },
+    {
+      "source": "1494f8a1589dc75307c5",
+      "target": "ea8fef8a05b0a42dd926",
+      "type": "DataFilter"
+    },
+    {
+      "source": "1494f8a1589dc75307c5",
+      "target": "84ccc7d2cc70a9e80913",
+      "type": "DataFilter"
     }
   ]
 }

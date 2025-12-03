@@ -509,7 +509,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "f01cfdd0aa7300523ca4",
+        "name": "fbbccf93683d83e975c3",
         "field": {
           "Column": {
             "Expression": {
@@ -523,7 +523,7 @@
         "type": "Categorical"
       },
       {
-        "name": "3bb6ad803e6b3827c8ad",
+        "name": "9d7e6d8681500511bbea",
         "field": {
           "Column": {
             "Expression": {
@@ -535,6 +535,20 @@
           }
         },
         "type": "Categorical"
+      },
+      {
+        "name": "2735abc65e80302b5463",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Medidas"
+              }
+            },
+            "Property": "QTD_Inscricoes"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

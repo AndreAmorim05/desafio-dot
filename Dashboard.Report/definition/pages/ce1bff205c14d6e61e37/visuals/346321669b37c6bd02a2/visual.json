@@ -208,7 +208,7 @@
               "layout": {
                 "expr": {
                   "Literal": {
-                    "Value": "'Before'"
+                    "Value": "'After'"
                   }
                 }
               },
@@ -590,34 +590,6 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "86ce90f5eb06c52998dd",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "calendario"
-              }
-            },
-            "Property": "Ano"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "8e4f77740d027a221d0d",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "calendario"
-              }
-            },
-            "Property": "Nome do Mês"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
         "name": "fc40f8c8082a954b6eb3",
         "field": {
           "Column": {
@@ -688,90 +660,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "5d567804587102d73706",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Medidas"
-              }
-            },
-            "Property": "VLR_Receita"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "79720d69d44aa3686d73",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Medidas"
-              }
-            },
-            "Property": "QTD_Inscricoes"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "ceeeb0a652eb3ac18a41",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Medidas"
-              }
-            },
-            "Property": "QTD_Inscricoes_Concluidas"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "452554fb89b5bd07a6ea",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Medidas"
-              }
-            },
-            "Property": "Taxa_Conclusao"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "1888558405d70ae23131",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Medidas"
-              }
-            },
-            "Property": "Variacao_Receita_MoM"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "7cff86a46ddcb9024350",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "cursos"
-              }
-            },
-            "Property": "RANKING_CURSO"
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }
