@@ -2101,6 +2101,16 @@ cultureInfo pt-BR
 			            "State": "Generated",
 			            "Weight": 0.99
 			          }
+			        },
+			        {
+			          "Inscrições Efetivas": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -2123,6 +2133,16 @@ cultureInfo pt-BR
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "Receita": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -2147,6 +2167,16 @@ cultureInfo pt-BR
 			            "State": "Generated",
 			            "Weight": 0.99
 			          }
+			        },
+			        {
+			          "Inscrições Totais": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -2170,6 +2200,16 @@ cultureInfo pt-BR
 			            "State": "Generated",
 			            "Weight": 0.99
 			          }
+			        },
+			        {
+			          "Taxa Conclusão": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -2192,6 +2232,16 @@ cultureInfo pt-BR
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "Ticket Médio": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -2282,9 +2332,280 @@ cultureInfo pt-BR
 			          }
 			        }
 			      ]
+			    },
+			    "entity__medida.top_categori_curso": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "Top_Categori_Curso"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "top categori curso": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Top_Categori_Curso": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "best categori curso": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "first categori curso": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "leading categori curso": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "maximum categori curso": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "peak categori curso": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "upper categori curso": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "entity__indicadore": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Indicadores"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "_indicadore": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__indicadore.entity__indicadore": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Indicadores",
+			          "ConceptualProperty": "_Indicadores"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "_indicadore": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "_indicadore name": {
+			            "State": "Generated"
+			          }
+			        }
+			      ],
+			      "NameType": "Name"
+			    },
+			    "entity__indicadore.entity__indicadores_campos": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Indicadores",
+			          "ConceptualProperty": "_Indicadores Campos"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "_indicadores campos": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "_indicadore campos": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        }
+			      ]
+			    },
+			    "entity__indicadore.entity__indicadores_pedido": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Indicadores",
+			          "ConceptualProperty": "_Indicadores Pedido"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "_indicadores pedido": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "_indicadore pedido": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
+			    "conclusoe_data_conclusao_ano_has_conclusoe_data_conclusao_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "conclusoes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "conclusoe.data_conclusao.ano": {
+			          "Target": {
+			            "Entity": "conclusoe.data_conclusao.ano"
+			          }
+			        },
+			        "conclusoe.data_conclusao.trimestre": {
+			          "Target": {
+			            "Entity": "conclusoe.data_conclusao.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "conclusoe.data_conclusao.ano"
+			            },
+			            "Object": {
+			              "Role": "conclusoe.data_conclusao.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "anos_have_trimestres"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "conclusoe.data_conclusao.trimestre"
+			            },
+			            "Object": {
+			              "Role": "conclusoe.data_conclusao.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_anos"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "conclusoe.data_conclusao.trimestre"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "conclusoe.data_conclusao.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_are_in_anos1"
+			        }
+			      ]
+			    },
+			    "conclusoe_data_conclusao_hierarquia_de_data_has_conclusoe_data_conclusao_dia": {
+			      "Binding": {
+			        "ConceptualEntity": "conclusoes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "conclusoe.data_conclusao.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "conclusoe.data_conclusao.hierarquia_de_data"
+			          }
+			        },
+			        "conclusoe.data_conclusao.dia": {
+			          "Target": {
+			            "Entity": "conclusoe.data_conclusao.dia"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "conclusoe.data_conclusao.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "conclusoe.data_conclusao.dia"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hierarquia_de_data_have_dias"
+			        }
+			      ]
+			    },
 			    "conclusoe_data_conclusao_hierarquia_de_data_has_conclusoe_data_conclusao_mê": {
 			      "Binding": {
 			        "ConceptualEntity": "conclusoes"
@@ -2578,7 +2899,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "anos_have_trimestres"
+			          "ID": "anos_have_trimestres1"
 			        },
 			        {
 			          "Attribute": {
@@ -2591,7 +2912,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_anos"
+			          "ID": "trimestres_have_anos1"
 			        },
 			        {
 			          "Preposition": {
@@ -2644,7 +2965,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_dias"
+			          "ID": "hierarquia_de_data_have_dias1"
 			        }
 			      ]
 			    },
@@ -2955,6 +3276,118 @@ cultureInfo pt-BR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "cursos_have_inscricoes_marketing"
+			        }
+			      ]
+			    },
+			    "entity__indicadore_has_entity__indicadore": {
+			      "Binding": {
+			        "ConceptualEntity": "_Indicadores"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity__indicadore": {
+			          "Target": {
+			            "Entity": "entity__indicadore"
+			          }
+			        },
+			        "entity__indicadore.entity__indicadore": {
+			          "Target": {
+			            "Entity": "entity__indicadore.entity__indicadore"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity__indicadore"
+			            },
+			            "Object": {
+			              "Role": "entity__indicadore.entity__indicadore"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_indicadores_have__indicadores"
+			        },
+			        {
+			          "Name": {
+			            "Subject": {
+			              "Role": "entity__indicadore"
+			            },
+			            "Name": {
+			              "Role": "entity__indicadore.entity__indicadore"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_indicadores_are_names_IDs_of__indicadores"
+			        }
+			      ]
+			    },
+			    "inscricoes_marketing_has_entity__medida_top_categori_curso": {
+			      "Binding": {
+			        "ConceptualEntity": "inscricoes_marketing"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "inscricoes_marketing": {
+			          "Target": {
+			            "Entity": "inscricoes_marketing"
+			          }
+			        },
+			        "entity__medida.top_categori_curso": {
+			          "Target": {
+			            "Entity": "entity__medida.top_categori_curso"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "inscricoes_marketing"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.top_categori_curso"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "inscricoes_marketing_have_top_categori_curso"
+			        }
+			      ]
+			    },
+			    "curso_has_entity__medida_top_categori_curso": {
+			      "Binding": {
+			        "ConceptualEntity": "cursos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "curso": {
+			          "Target": {
+			            "Entity": "curso"
+			          }
+			        },
+			        "entity__medida.top_categori_curso": {
+			          "Target": {
+			            "Entity": "entity__medida.top_categori_curso"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "curso"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.top_categori_curso"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "cursos_have_top_categori_curso"
 			        }
 			      ]
 			    },
@@ -4038,105 +4471,6 @@ cultureInfo pt-BR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "cursos_have_id_cursos"
-			        }
-			      ]
-			    },
-			    "conclusoe_data_conclusao_hierarquia_de_data_has_conclusoe_data_conclusao_dia": {
-			      "Binding": {
-			        "ConceptualEntity": "conclusoes"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "conclusoe.data_conclusao.hierarquia_de_data": {
-			          "Target": {
-			            "Entity": "conclusoe.data_conclusao.hierarquia_de_data"
-			          }
-			        },
-			        "conclusoe.data_conclusao.dia": {
-			          "Target": {
-			            "Entity": "conclusoe.data_conclusao.dia"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "conclusoe.data_conclusao.hierarquia_de_data"
-			            },
-			            "Object": {
-			              "Role": "conclusoe.data_conclusao.dia"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_dias1"
-			        }
-			      ]
-			    },
-			    "conclusoe_data_conclusao_ano_has_conclusoe_data_conclusao_trimestre": {
-			      "Binding": {
-			        "ConceptualEntity": "conclusoes"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "conclusoe.data_conclusao.ano": {
-			          "Target": {
-			            "Entity": "conclusoe.data_conclusao.ano"
-			          }
-			        },
-			        "conclusoe.data_conclusao.trimestre": {
-			          "Target": {
-			            "Entity": "conclusoe.data_conclusao.trimestre"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "conclusoe.data_conclusao.ano"
-			            },
-			            "Object": {
-			              "Role": "conclusoe.data_conclusao.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "anos_have_trimestres1"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "conclusoe.data_conclusao.trimestre"
-			            },
-			            "Object": {
-			              "Role": "conclusoe.data_conclusao.ano"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "trimestres_have_anos1"
-			        },
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "conclusoe.data_conclusao.trimestre"
-			            },
-			            "Prepositions": [
-			              {
-			                "in": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "conclusoe.data_conclusao.ano"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "trimestres_are_in_anos1"
 			        }
 			      ]
 			    },

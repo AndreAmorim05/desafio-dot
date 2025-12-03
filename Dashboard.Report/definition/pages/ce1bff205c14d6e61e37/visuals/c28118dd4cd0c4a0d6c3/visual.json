@@ -112,6 +112,13 @@
                   }
                 }
               }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'wf_standard-font, helvetica, arial, sans-serif'"
+                }
+              }
             }
           }
         }
@@ -119,5 +126,23 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "81d34ca5e59761a664d5"
+  "parentGroupName": "81d34ca5e59761a664d5",
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "7fd382860046004065e5",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "calendario"
+              }
+            },
+            "Property": "Data"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
 }

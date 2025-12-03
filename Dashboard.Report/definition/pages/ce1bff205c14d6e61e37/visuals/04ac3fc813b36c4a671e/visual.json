@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "04ac3fc813b36c4a671e",
   "position": {
-    "x": 15.555555555555555,
-    "y": 30.947459086993966,
+    "x": 12.098765432098769,
+    "y": 29.988689220942124,
     "z": 9006,
-    "height": 333.85012919896633,
-    "width": 1171.1111111111111
+    "height": 334.4444444444444,
+    "width": 1168.8888888888889
   },
   "visual": {
     "visualType": "areaChart",
@@ -242,6 +242,32 @@
           },
           "selector": {
             "metadata": "_Medidas.QTD_Inscricoes"
+          }
+        }
+      ],
+      "seriesLabels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "zoom": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
           }
         }
       ]

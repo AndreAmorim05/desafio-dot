@@ -37,6 +37,17 @@
           "type": "BaseTheme"
         }
       ]
+    },
+    {
+      "name": "RegisteredResources",
+      "type": "RegisteredResources",
+      "items": [
+        {
+          "name": "limpa_filtro3620539902664127.png",
+          "path": "limpa_filtro3620539902664127.png",
+          "type": "Image"
+        }
+      ]
     }
   ],
   "settings": {
