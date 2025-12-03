@@ -1,0 +1,73 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "5b33ab708e0191360619",
+  "position": {
+    "x": 30,
+    "y": 0,
+    "z": 19500,
+    "height": 41,
+    "width": 329
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Tabela dos ",
+                    "textStyle": {
+                      "fontFamily": "DIN",
+                      "fontSize": "20pt"
+                    }
+                  },
+                  {
+                    "value": "Rankings",
+                    "textStyle": {
+                      "fontFamily": "DIN",
+                      "fontSize": "20pt",
+                      "color": "#2aa536"
+                    }
+                  }
+                ],
+                "horizontalTextAlignment": "center"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "parentGroupName": "e73a41f2203320dd3962"
+}

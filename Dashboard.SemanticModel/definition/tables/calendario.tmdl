@@ -1,0 +1,162 @@
+table calendario
+	lineageTag: 8872be60-6138-4f6c-955c-1959f8ebb40a
+	dataCategory: Time
+
+	column Data
+		dataType: dateTime
+		isKey
+		formatString: Short Date
+		lineageTag: e7a40b8b-c320-4629-a99a-bb7042f61531
+		summarizeBy: none
+		sourceColumn: Data
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Dia da Semana'
+		dataType: int64
+		formatString: 0
+		lineageTag: f983932e-92e9-4616-87fc-e70625c46d16
+		summarizeBy: none
+		sourceColumn: Dia da Semana
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Nome do Dia'
+		dataType: string
+		lineageTag: b0d4d40e-8e98-4766-a710-388157d202d9
+		summarizeBy: none
+		sourceColumn: Nome do Dia
+		sortByColumn: 'Dia da Semana'
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column Dia
+		dataType: string
+		lineageTag: 9bebff06-87a0-4e23-9125-4a196f58ca4c
+		summarizeBy: none
+		sourceColumn: Dia
+		sortByColumn: 'Dia da Semana'
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Semana do Ano'
+		dataType: int64
+		formatString: 0
+		lineageTag: 104a39c6-125c-4772-85ef-2aa347df7fb1
+		summarizeBy: none
+		sourceColumn: Semana do Ano
+
+		annotation SummarizationSetBy = Automatic
+
+	column Semana
+		dataType: string
+		lineageTag: 6be635f4-8c16-4185-ad64-da059e3f6e74
+		summarizeBy: none
+		sourceColumn: Semana
+		sortByColumn: 'Semana do Ano'
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Nome do Mês'
+		dataType: string
+		lineageTag: 96be987e-e21e-4759-8ccd-65f89cb1d087
+		summarizeBy: none
+		sourceColumn: Nome do Mês
+		sortByColumn: 'Num Mês'
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Num Mês'
+		dataType: int64
+		formatString: 0
+		lineageTag: 07863aea-d57b-4312-bd69-7c4a038b2cf7
+		summarizeBy: none
+		sourceColumn: Num Mês
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ano
+		dataType: int64
+		formatString: 0
+		lineageTag: 18e73b0b-e84e-47ee-8f3a-19e506bea09d
+		summarizeBy: none
+		sourceColumn: Ano
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ano-Mês
+		dataType: string
+		lineageTag: 14bea9f0-1aab-4169-bd3c-8dcbd2af3e29
+		summarizeBy: none
+		sourceColumn: Ano-Mês
+
+		annotation SummarizationSetBy = Automatic
+
+	column Trimestre
+		dataType: int64
+		formatString: 0
+		lineageTag: ad924d1b-efa3-496f-882c-46f374526ad1
+		summarizeBy: none
+		sourceColumn: Trimestre
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Trimestre Texto'
+		dataType: string
+		lineageTag: 1d344e84-bc36-4e8f-aa4a-9712d4b4cb4f
+		summarizeBy: none
+		sourceColumn: Trimestre Texto
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ano-Trimestre
+		dataType: string
+		lineageTag: f0b8aa06-3e24-4b67-a261-5300a2d4e934
+		summarizeBy: none
+		sourceColumn: Ano-Trimestre
+
+		annotation SummarizationSetBy = Automatic
+
+	partition calendario = m
+		mode: import
+		queryGroup: Dimensões
+		source =
+				let
+				    StartDate = #date(2025, 1, 1),
+				    EndDate = #date(2026, 1, 1),
+				    Source = List.Dates(StartDate, Duration.Days(EndDate - StartDate) + 1, #duration(1, 0, 0, 0)),
+				    TableFromList = Table.FromList(Source, Splitter.SplitByNothing(), null, null, ExtraValues.Error),
+				    RenamedColumns = Table.RenameColumns(TableFromList,{{"Column1", "Date"}}),
+				    ChangedType = Table.TransformColumnTypes(RenamedColumns,{{"Date", type date}}),
+				    #"Colunas Renomeadas" = Table.RenameColumns(ChangedType,{{"Date", "Data"}}),
+				    #"Dia da Semana Inserido" = Table.AddColumn(#"Colunas Renomeadas", "Dia da Semana", each Date.DayOfWeek([Data], 1)),
+				    #"Nome do Dia Inserido" = Table.AddColumn(#"Dia da Semana Inserido", "Nome do Dia", each Date.DayOfWeekName([Data]), type text),
+				    #"Primeiros Caracteres Inseridos" = Table.AddColumn(#"Nome do Dia Inserido", "Dia", each Text.Start(Text.Proper([Nome do Dia]), 3), type text),
+				    #"Semana do Ano Inserida" = Table.AddColumn(#"Primeiros Caracteres Inseridos", "Semana do Ano", each Date.WeekOfYear([Data], 1)),
+				    #"Coluna Mesclada Inserida" = Table.AddColumn(#"Semana do Ano Inserida", "Semana", each Text.Combine({"Sem ", Text.From([Semana do Ano], "pt-BR")}), type text),
+				    #"Nome do Mês Inserido" = Table.AddColumn(#"Coluna Mesclada Inserida", "Nome do Mês", each Date.MonthName([Data]), type text),
+				    #"Mês Inserido" = Table.AddColumn(#"Nome do Mês Inserido", "Num Mês", each Date.Month([Data]), Int64.Type),
+				    #"Ano Inserido" = Table.AddColumn(#"Mês Inserido", "Ano", each Date.Year([Data]), Int64.Type),
+				    #"Trimestre Inserido" = Table.AddColumn(#"Ano Inserido", "Trimestre", each Date.QuarterOfYear([Data]), Int64.Type),
+				    #"Trimestre Formatado" = Table.AddColumn(#"Trimestre Inserido", "Trimestre Texto", each "Trim " & Text.From([Trimestre]), type text),
+				    #"Ano-Trimestre Inserido" = Table.AddColumn(#"Trimestre Formatado", "Ano-Trimestre", each Text.From([Ano]) & "-Trim" & Text.From([Trimestre]), type text),
+				    #"Coluna Personalizada Adicionada" = Table.AddColumn(#"Ano-Trimestre Inserido", "Ano-Mês", each Text.Combine({Date.ToText([Data], "yy"), "-", Date.ToText([Data], "MM")}), type text),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Coluna Personalizada Adicionada",{{"Semana do Ano", Int64.Type}, {"Dia da Semana", Int64.Type}}),
+				    #"Capitalized Each Word" = Table.TransformColumns(#"Changed Type",{{"Nome do Mês", Text.Proper, type text}})
+				in
+				    #"Capitalized Each Word"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

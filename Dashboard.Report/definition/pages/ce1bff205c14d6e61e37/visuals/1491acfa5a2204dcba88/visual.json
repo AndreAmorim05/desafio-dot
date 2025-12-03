@@ -1,0 +1,54 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "1491acfa5a2204dcba88",
+  "position": {
+    "x": 0,
+    "y": 6.9154382873336706,
+    "z": 9001,
+    "height": 42.233569540501634,
+    "width": 208.11379097093382,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Selecione o ",
+                    "textStyle": {
+                      "fontFamily": "DIN",
+                      "fontSize": "16pt"
+                    }
+                  },
+                  {
+                    "value": "indicador",
+                    "textStyle": {
+                      "fontFamily": "DIN",
+                      "fontSize": "16pt",
+                      "color": "#2aa536"
+                    }
+                  },
+                  {
+                    "value": ":",
+                    "textStyle": {
+                      "fontFamily": "DIN",
+                      "fontSize": "16pt"
+                    }
+                  }
+                ],
+                "horizontalTextAlignment": "center"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "parentGroupName": "fb659b099c4d7e500327"
+}

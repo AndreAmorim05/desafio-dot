@@ -1,0 +1,47 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "07b315c57059514473e8",
+  "position": {
+    "x": 23.739047198291729,
+    "y": 0,
+    "z": 10000,
+    "height": 42.260528549269814,
+    "width": 442.2354760326927,
+    "tabOrder": 1000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Por categoria de curso e ",
+                    "textStyle": {
+                      "fontFamily": "DIN",
+                      "fontSize": "16pt"
+                    }
+                  },
+                  {
+                    "value": "canal de marketing",
+                    "textStyle": {
+                      "fontFamily": "DIN",
+                      "fontSize": "16pt",
+                      "color": "#2aa536"
+                    }
+                  }
+                ],
+                "horizontalTextAlignment": "center"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "parentGroupName": "30bec389eec1dd23e9d5"
+}

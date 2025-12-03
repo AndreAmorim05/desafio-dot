@@ -1,0 +1,100 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "4c0c38b5ebea924156a0",
+  "position": {
+    "x": 455.55555555555554,
+    "y": 158.88888888888889,
+    "z": 2000,
+    "height": 38.888888888888886,
+    "width": 417.77777777777777,
+    "tabOrder": 1000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "ou",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontFamily": "DIN",
+                      "fontSize": "16pt"
+                    }
+                  },
+                  {
+                    "value": ", selecione o ",
+                    "textStyle": {
+                      "fontFamily": "DIN",
+                      "fontSize": "16pt"
+                    }
+                  },
+                  {
+                    "value": "ano",
+                    "textStyle": {
+                      "fontFamily": "DIN",
+                      "fontSize": "16pt",
+                      "color": "#2aa536"
+                    }
+                  },
+                  {
+                    "value": ", ",
+                    "textStyle": {
+                      "fontFamily": "DIN",
+                      "fontSize": "16pt",
+                      "color": "#000000"
+                    }
+                  },
+                  {
+                    "value": "trimestre",
+                    "textStyle": {
+                      "fontFamily": "DIN",
+                      "fontSize": "16pt",
+                      "color": "#2aa536"
+                    }
+                  },
+                  {
+                    "value": ",",
+                    "textStyle": {
+                      "fontFamily": "DIN",
+                      "fontSize": "16pt"
+                    }
+                  },
+                  {
+                    "value": " mês ",
+                    "textStyle": {
+                      "fontFamily": "DIN",
+                      "fontSize": "16pt",
+                      "color": "#2aa536"
+                    }
+                  },
+                  {
+                    "value": "e",
+                    "textStyle": {
+                      "fontFamily": "DIN",
+                      "fontSize": "16pt",
+                      "color": "#000000"
+                    }
+                  },
+                  {
+                    "value": " semana",
+                    "textStyle": {
+                      "fontFamily": "DIN",
+                      "fontSize": "16pt",
+                      "color": "#2aa536"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

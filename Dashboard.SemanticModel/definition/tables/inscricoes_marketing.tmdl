@@ -2,7 +2,8 @@ table inscricoes_marketing
 	lineageTag: 22a86e86-d885-4823-81c1-544d5a815785
 
 	column ID_INSCRICAO
-		dataType: string
+		dataType: int64
+		formatString: 0
 		lineageTag: 4cf2e4f5-687d-4f3b-a7ce-3ae9bb318bcb
 		summarizeBy: none
 		sourceColumn: ID_INSCRICAO
@@ -29,46 +30,46 @@ table inscricoes_marketing
 
 	column DATA_INSCRICAO
 		dataType: dateTime
-		formatString: Long Date
+		formatString: Short Date
 		lineageTag: b7d7f370-4faf-44f9-aa52-d7a6fc23d32d
 		summarizeBy: none
 		sourceColumn: DATA_INSCRICAO
-
-		variation Variation
-			isDefault
-			relationship: 00346c24-bf2d-4cec-bb22-a49e0ae332e8
-			defaultHierarchy: LocalDateTable_9d9d413b-862f-491d-81db-53acb5f6a237.'Hierarquia de datas'
 
 		annotation SummarizationSetBy = Automatic
 
 		annotation UnderlyingDateTimeDataType = Date
 
 	column PRECO_PAGO
-		dataType: int64
-		formatString: 0
+		dataType: decimal
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
 		lineageTag: b3083f96-eecc-4d94-8eda-d5524ceaa24d
 		summarizeBy: sum
 		sourceColumn: PRECO_PAGO
 
 		annotation SummarizationSetBy = Automatic
 
-	column CANAL
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	column CANAL_MARKETING
 		dataType: string
-		lineageTag: 412a11c5-47eb-4742-b04a-2224f902c6c3
+		lineageTag: c7e0c359-f2fd-4857-b760-64de887b49bd
 		summarizeBy: none
-		sourceColumn: CANAL
+		sourceColumn: CANAL_MARKETING
 
 		annotation SummarizationSetBy = Automatic
 
 	partition inscricoes_marketing = m
 		mode: import
+		queryGroup: Fatos
 		source =
 				let
 				    Fonte = Csv.Document(File.Contents("H:\Meu Drive\PROJETOS\DESAFIOS\Dot\desafio-dot\dados\inscricoes_marketing.csv"),[Delimiter=",", Columns=6, Encoding=65001, QuoteStyle=QuoteStyle.None]),
 				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),
-				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"ID_INSCRICAO", type text}, {"ID_ALUNO", Int64.Type}, {"ID_CURSO", Int64.Type}, {"DATA_INSCRICAO", type date}, {"PRECO_PAGO", Int64.Type}, {"CANAL", type text}})
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"ID_INSCRICAO", Int64.Type}, {"ID_ALUNO", Int64.Type}, {"ID_CURSO", Int64.Type}, {"DATA_INSCRICAO", type date}, {"PRECO_PAGO", Currency.Type}, {"CANAL_MARKETING", type text}})
 				in
 				    #"Tipo Alterado"
 
 	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navegação
 
