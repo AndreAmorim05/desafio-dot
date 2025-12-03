@@ -40,12 +40,12 @@ table _Indicadores
 		mode: import
 		source =
 				{
-				    ("Receita", NAMEOF('_Medidas'[VLR_Inscricoes]), 0),
+				    ("Receita", NAMEOF('_Medidas'[VLR_Receita]), 0),
 				    ("Ticket Médio", NAMEOF('_Medidas'[Ticket_Medio]), 1),
 				    ("Receita MTD", NAMEOF('_Medidas'[Receita_MTD]), 2),
 				    ("Taxa Conclusão", NAMEOF('_Medidas'[Taxa_Conclusao]), 3),
-				    ("Inscrições Efetivas", NAMEOF('_Medidas'[QTD_Inscricoes_Reais]), 4),
-				    ("Inscrições Totais", NAMEOF('_Medidas'[QTD_Inscricoes]), 5)
+				    ("Inscrições Totais", NAMEOF('_Medidas'[QTD_Inscricoes]), 4),
+				    ("Inscrições Concluidas", NAMEOF('_Medidas'[QTD_Inscricoes_Concluidas]), 5)
 				}
 
 	annotation PBI_Id = f737585b1643435f992cd7787b12ebbf

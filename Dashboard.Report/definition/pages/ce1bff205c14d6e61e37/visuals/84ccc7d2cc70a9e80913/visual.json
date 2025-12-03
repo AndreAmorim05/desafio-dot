@@ -42,12 +42,12 @@
                       "Entity": "_Medidas"
                     }
                   },
-                  "Property": "QTD_Inscricoes_Reais"
+                  "Property": "QTD_Inscricoes"
                 }
               },
-              "queryRef": "_Medidas.QTD_Inscricoes_Reais",
-              "nativeQueryRef": "Inscrições Efetivas",
-              "displayName": "Inscrições Efetivas"
+              "queryRef": "_Medidas.QTD_Inscricoes",
+              "nativeQueryRef": "Inscrições Totais",
+              "displayName": "Inscrições Totais"
             }
           ],
           "fieldParameters": [
@@ -78,7 +78,7 @@
                     "Entity": "_Medidas"
                   }
                 },
-                "Property": "QTD_Inscricoes_Reais"
+                "Property": "QTD_Inscricoes"
               }
             },
             "direction": "Descending"

@@ -103,6 +103,16 @@ cultureInfo pt-BR
 			            "State": "Generated",
 			            "Weight": 0.99
 			          }
+			        },
+			        {
+			          "Curso": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -2081,25 +2091,35 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "entity__medida.QTD_inscricoes_reais": {
+			    "entity__medida.QTD_inscricoes_concluidas": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Medidas",
-			          "ConceptualProperty": "QTD_Inscricoes_Reais"
+			          "ConceptualProperty": "QTD_Inscricoes_Concluidas"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "QTD inscricoes reais": {
+			          "QTD inscricoes concluidas": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "QTD_Inscricoes_Reais": {
+			          "QTD_Inscricoes_Concluidas": {
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "Inscrições Concluídas": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        },
 			        {
@@ -2114,22 +2134,22 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "entity__medida.VLR_inscricoes": {
+			    "entity__medida.VLR_receita": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Medidas",
-			          "ConceptualProperty": "VLR_Inscricoes"
+			          "ConceptualProperty": "VLR_Receita"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "VLR inscricoes": {
+			          "VLR receita": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "VLR_Inscricoes": {
+			          "VLR_Receita": {
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
@@ -2501,6 +2521,29 @@ cultureInfo pt-BR
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.78
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.VLR_receita_concluidos": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "VLR_Receita_Concluidos"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "VLR receita concluidos": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "VLR_Receita_Concluidos": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
 			          }
 			        }
 			      ]
@@ -3279,6 +3322,39 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
+			    "inscricoes_marketing_has_entity__medida_VLR_receita_concluidos": {
+			      "Binding": {
+			        "ConceptualEntity": "inscricoes_marketing"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "inscricoes_marketing": {
+			          "Target": {
+			            "Entity": "inscricoes_marketing"
+			          }
+			        },
+			        "entity__medida.VLR_receita_concluidos": {
+			          "Target": {
+			            "Entity": "entity__medida.VLR_receita_concluidos"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "inscricoes_marketing"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.VLR_receita_concluidos"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "inscricoes_marketing_have_VLR_receita_concluidos"
+			        }
+			      ]
+			    },
 			    "entity__indicadore_has_entity__indicadore": {
 			      "Binding": {
 			        "ConceptualEntity": "_Indicadores"
@@ -3556,39 +3632,6 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "conclusoe_has_entity__medida_ticket_medio": {
-			      "Binding": {
-			        "ConceptualEntity": "conclusoes"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "conclusoe": {
-			          "Target": {
-			            "Entity": "conclusoe"
-			          }
-			        },
-			        "entity__medida.ticket_medio": {
-			          "Target": {
-			            "Entity": "entity__medida.ticket_medio"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "conclusoe"
-			            },
-			            "Object": {
-			              "Role": "entity__medida.ticket_medio"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "conclusoes_have_ticket_medio"
-			        }
-			      ]
-			    },
 			    "inscricoes_marketing_has_entity__medida_taxa_conclusao": {
 			      "Binding": {
 			        "ConceptualEntity": "inscricoes_marketing"
@@ -3688,7 +3731,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "inscricoes_marketing_has_entity__medida_VLR_inscricoes": {
+			    "inscricoes_marketing_has_entity__medida_VLR_receita": {
 			      "Binding": {
 			        "ConceptualEntity": "inscricoes_marketing"
 			      },
@@ -3699,9 +3742,9 @@ cultureInfo pt-BR
 			            "Entity": "inscricoes_marketing"
 			          }
 			        },
-			        "entity__medida.VLR_inscricoes": {
+			        "entity__medida.VLR_receita": {
 			          "Target": {
-			            "Entity": "entity__medida.VLR_inscricoes"
+			            "Entity": "entity__medida.VLR_receita"
 			          }
 			        }
 			      },
@@ -3712,16 +3755,16 @@ cultureInfo pt-BR
 			              "Role": "inscricoes_marketing"
 			            },
 			            "Object": {
-			              "Role": "entity__medida.VLR_inscricoes"
+			              "Role": "entity__medida.VLR_receita"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "inscricoes_marketing_have_VLR_inscricoes"
+			          "ID": "inscricoes_marketing_have_VLR_receita"
 			        }
 			      ]
 			    },
-			    "conclusoe_has_entity__medida_QTD_inscricoes_reais": {
+			    "conclusoe_has_entity__medida_QTD_inscricoes_concluidas": {
 			      "Binding": {
 			        "ConceptualEntity": "conclusoes"
 			      },
@@ -3732,9 +3775,9 @@ cultureInfo pt-BR
 			            "Entity": "conclusoe"
 			          }
 			        },
-			        "entity__medida.QTD_inscricoes_reais": {
+			        "entity__medida.QTD_inscricoes_concluidas": {
 			          "Target": {
-			            "Entity": "entity__medida.QTD_inscricoes_reais"
+			            "Entity": "entity__medida.QTD_inscricoes_concluidas"
 			          }
 			        }
 			      },
@@ -3745,12 +3788,12 @@ cultureInfo pt-BR
 			              "Role": "conclusoe"
 			            },
 			            "Object": {
-			              "Role": "entity__medida.QTD_inscricoes_reais"
+			              "Role": "entity__medida.QTD_inscricoes_concluidas"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "conclusoes_have_QTD_inscricoes_reais"
+			          "ID": "conclusoes_have_QTD_inscricoes_concluidas"
 			        }
 			      ]
 			    },

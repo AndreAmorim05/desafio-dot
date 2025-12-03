@@ -137,7 +137,7 @@
                           [
                             {
                               "Literal": {
-                                "Value": "'''_Medidas''[VLR_Inscricoes]'"
+                                "Value": "'''_Medidas''[VLR_Receita]'"
                               }
                             }
                           ]
@@ -165,7 +165,7 @@
                                 "0": [
                                   {
                                     "Literal": {
-                                      "Value": "'''_Medidas''[VLR_Inscricoes]'"
+                                      "Value": "'''_Medidas''[VLR_Receita]'"
                                     }
                                   }
                                 ]

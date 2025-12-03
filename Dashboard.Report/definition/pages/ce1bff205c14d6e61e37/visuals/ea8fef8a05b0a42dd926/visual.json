@@ -60,12 +60,12 @@
                       "Entity": "_Medidas"
                     }
                   },
-                  "Property": "QTD_Inscricoes_Reais"
+                  "Property": "QTD_Inscricoes"
                 }
               },
-              "queryRef": "_Medidas.QTD_Inscricoes_Reais",
-              "nativeQueryRef": "Inscrições Efetivas",
-              "displayName": "Inscrições Efetivas"
+              "queryRef": "_Medidas.QTD_Inscricoes",
+              "nativeQueryRef": "Inscrições Totais",
+              "displayName": "Inscrições Totais"
             }
           ],
           "fieldParameters": [
@@ -96,7 +96,7 @@
                     "Entity": "_Medidas"
                   }
                 },
-                "Property": "QTD_Inscricoes_Reais"
+                "Property": "QTD_Inscricoes"
               }
             },
             "direction": "Descending"
@@ -505,5 +505,37 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "bb4f2c11060db5710607"
+  "parentGroupName": "bb4f2c11060db5710607",
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "f01cfdd0aa7300523ca4",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "cursos"
+              }
+            },
+            "Property": "CATEGORIA_CURSO"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "3bb6ad803e6b3827c8ad",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "inscricoes_marketing"
+              }
+            },
+            "Property": "CANAL_MARKETING"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
 }

@@ -88,7 +88,7 @@
                           [
                             {
                               "Literal": {
-                                "Value": "'''_Medidas''[QTD_Inscricoes_Reais]'"
+                                "Value": "'''_Medidas''[QTD_Inscricoes]'"
                               }
                             }
                           ]
@@ -116,7 +116,7 @@
                                 "0": [
                                   {
                                     "Literal": {
-                                      "Value": "'''_Medidas''[QTD_Inscricoes_Reais]'"
+                                      "Value": "'''_Medidas''[QTD_Inscricoes]'"
                                     }
                                   }
                                 ]
@@ -140,7 +140,7 @@
                         },
                         "valueMap": [
                           {
-                            "0": "Inscrições Efetivas"
+                            "0": "Inscrições Totais"
                           }
                         ]
                       }
@@ -256,14 +256,14 @@
                     [
                       {
                         "Literal": {
-                          "Value": "'''_Medidas''[QTD_Inscricoes_Reais]'"
+                          "Value": "'''_Medidas''[QTD_Inscricoes]'"
                         }
                       }
                     ],
                     [
                       {
                         "Literal": {
-                          "Value": "'''_Medidas''[QTD_Inscricoes]'"
+                          "Value": "'''_Medidas''[QTD_Inscricoes_Concluidas]'"
                         }
                       }
                     ]
@@ -291,7 +291,7 @@
                           "0": [
                             {
                               "Literal": {
-                                "Value": "'''_Medidas''[QTD_Inscricoes_Reais]'"
+                                "Value": "'''_Medidas''[QTD_Inscricoes]'"
                               }
                             }
                           ]
@@ -302,7 +302,7 @@
                           "0": [
                             {
                               "Literal": {
-                                "Value": "'''_Medidas''[QTD_Inscricoes]'"
+                                "Value": "'''_Medidas''[QTD_Inscricoes_Concluidas]'"
                               }
                             }
                           ]
@@ -326,10 +326,10 @@
                   },
                   "valueMap": [
                     {
-                      "0": "Inscrições Efetivas"
+                      "0": "Inscrições Totais"
                     },
                     {
-                      "0": "Inscrições Totais"
+                      "0": "Inscrições Concluidas"
                     }
                   ]
                 }

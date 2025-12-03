@@ -2,24 +2,13 @@ table _Medidas
 	lineageTag: b88a0405-04df-4eda-b64f-e4cd2b9201d5
 
 	/// Quantidade total de inscrições, inclui apenas inscrições finalizadas.
-	measure QTD_Inscricoes_Reais = DISTINCTCOUNT(conclusoes[ID_INSCRICAO])
+	measure QTD_Inscricoes_Concluidas = DISTINCTCOUNT(conclusoes[ID_INSCRICAO])
 		formatString: 0
 		displayFolder: Quantidades
 		lineageTag: f9079bd7-a9c4-421d-9a9f-66c5aa29f379
 
 	/// Valor total em reais que entrou das inscrições (compreende apenas valores de inscrições concluídas)
-	measure VLR_Inscricoes =
-			CALCULATE(
-			    SUM(inscricoes_marketing[PRECO_PAGO]),
-			    FILTER(
-			        inscricoes_marketing,
-			        CONTAINS(
-			            conclusoes,
-			            conclusoes[ID_INSCRICAO],
-			            inscricoes_marketing[ID_INSCRICAO]
-			        )
-			    )
-			)
+	measure VLR_Receita = SUM(inscricoes_marketing[PRECO_PAGO])
 		formatString: "R$"\ #,0.###############;-"R$"\ #,0.###############;"R$"\ #,0.###############
 		displayFolder: Valores
 		lineageTag: cc9d4a9c-9e72-4ae2-bfc3-483a4dabcfa3
@@ -33,13 +22,13 @@ table _Medidas
 		lineageTag: 6ec681bc-36cb-4a53-9d21-fb76bbf36c02
 
 	/// Taxa (percentual) de inscrições que foram devidamente concluídas
-	measure Taxa_Conclusao = DIVIDE([QTD_Inscricoes_Reais], [QTD_Inscricoes], 0)
+	measure Taxa_Conclusao = DIVIDE([QTD_Inscricoes_Concluidas], [QTD_Inscricoes], 0)
 		formatString: 0%;-0%;0%
 		displayFolder: Taxas
 		lineageTag: aaeb4317-fa4a-433e-a141-5cef1dea3e84
 
 	/// Média de quanto cada inscrição gerou de receita
-	measure Ticket_Medio = DIVIDE([VLR_Inscricoes], [QTD_Inscricoes_Reais], 0)
+	measure Ticket_Medio = DIVIDE([VLR_Receita], [QTD_Inscricoes], 0)
 		formatString: "R$"\ #,0.###############;-"R$"\ #,0.###############;"R$"\ #,0.###############
 		displayFolder: Valores
 		lineageTag: 5b3627ce-b89d-48c1-bc15-11a5d4db6f58
@@ -51,7 +40,7 @@ table _Medidas
 	/// DATESMTD retorna todas as datas desde o início do mês até a data máxima no contexto atual do filtro
 	measure Receita_MTD =
 			CALCULATE(
-			    [VLR_Inscricoes],
+			    [VLR_Receita],
 			    DATESMTD(inscricoes_marketing[DATA_INSCRICAO])
 			)
 		formatString: "R$"\ #,0.###############;-"R$"\ #,0.###############;"R$"\ #,0.###############
@@ -63,10 +52,28 @@ table _Medidas
 	measure Top_Categori_Curso =
 			RANKX(
 			    ALLSELECTED(cursos[CATEGORIA_CURSO]),
-			    [VLR_Inscricoes],,DESC
+			    [VLR_Receita],,DESC
 			)
 		formatString: 0
 		lineageTag: 84b612c9-9d71-4636-ad01-8fbc399ac984
+
+	measure VLR_Receita_Concluidos =
+			CALCULATE(
+			    SUM(inscricoes_marketing[PRECO_PAGO]),
+			    FILTER(
+			        inscricoes_marketing,
+			        CONTAINS(
+			            conclusoes,
+			            conclusoes[ID_INSCRICAO],
+			            inscricoes_marketing[ID_INSCRICAO]
+			        )
+			    )
+			)
+		formatString: "R$"\ #,0.###############;-"R$"\ #,0.###############;"R$"\ #,0.###############
+		displayFolder: Valores
+		lineageTag: 6bedc32a-e29f-4a52-ae05-6f533208becf
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
 
 	partition _Medidas = m
 		mode: import

@@ -56,10 +56,10 @@
                       "Entity": "_Medidas"
                     }
                   },
-                  "Property": "VLR_Inscricoes"
+                  "Property": "VLR_Receita"
                 }
               },
-              "queryRef": "_Medidas.VLR_Inscricoes",
+              "queryRef": "_Medidas.VLR_Receita",
               "nativeQueryRef": "Receita",
               "displayName": "Receita"
             }
@@ -232,6 +232,43 @@
                 "color": {
                   "expr": {
                     "ThemeDataColor": {
+                      "ColorId": 3,
+                      "Percent": 0.2
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Medidas.QTD_Inscricoes"
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#2aa536'"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Medidas.VLR_Receita"
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
                       "ColorId": 1,
                       "Percent": 0.4
                     }
@@ -241,7 +278,7 @@
             }
           },
           "selector": {
-            "metadata": "_Medidas.QTD_Inscricoes"
+            "metadata": "_Medidas.QTD_Inscricoes_Concluidas"
           }
         }
       ],
@@ -289,5 +326,37 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "337b89b42012bcd46a18"
+  "parentGroupName": "337b89b42012bcd46a18",
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "4993aa009c826d011b22",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "calendario"
+              }
+            },
+            "Property": "Ano"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "e42725e4baa26ae44942",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "calendario"
+              }
+            },
+            "Property": "Nome do Mês"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
 }

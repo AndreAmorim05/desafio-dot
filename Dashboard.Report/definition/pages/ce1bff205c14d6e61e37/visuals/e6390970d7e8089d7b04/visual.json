@@ -2,12 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "e6390970d7e8089d7b04",
   "position": {
-    "x": 11.563180827886711,
+    "x": 12.102396514161221,
     "y": 10.479797979797956,
     "z": 14500,
     "height": 163.48484848484847,
-    "width": 189.21568627450981,
-    "tabOrder": 0
+    "width": 198.0392156862745
   },
   "visual": {
     "visualType": "card",
@@ -23,7 +22,7 @@
                       "Entity": "_Medidas"
                     }
                   },
-                  "Property": "VLR_Inscricoes"
+                  "Property": "VLR_Receita"
                 }
               },
               "queryRef": "_Medidas.VLR_Inscricoes",
@@ -43,7 +42,7 @@
                     "Entity": "_Medidas"
                   }
                 },
-                "Property": "VLR_Inscricoes"
+                "Property": "VLR_Receita"
               }
             },
             "direction": "Descending"
