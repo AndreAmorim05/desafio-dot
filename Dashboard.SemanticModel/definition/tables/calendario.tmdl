@@ -1,17 +1,14 @@
 table calendario
 	lineageTag: 8872be60-6138-4f6c-955c-1959f8ebb40a
+	dataCategory: Time
 
 	column Data
 		dataType: dateTime
+		isKey
 		formatString: Long Date
 		lineageTag: e7a40b8b-c320-4629-a99a-bb7042f61531
 		summarizeBy: none
 		sourceColumn: Data
-
-		variation Variation
-			isDefault
-			relationship: d8075ffd-8286-48d5-a93d-0bb84df575d2
-			defaultHierarchy: LocalDateTable_d3a0e8a0-04a0-45e5-a675-5a3674ed45f4.'Hierarquia de datas'
 
 		annotation SummarizationSetBy = Automatic
 

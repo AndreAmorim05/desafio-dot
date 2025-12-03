@@ -12,8 +12,15 @@ relationship 9afb5430-18bb-4a93-9746-ac4052d6245e
 	fromColumn: conclusoes.DATA_CONCLUSAO
 	toColumn: LocalDateTable_54fc6813-8a3b-4428-9d25-d27a2af6eb59.Date
 
-relationship d8075ffd-8286-48d5-a93d-0bb84df575d2
-	joinOnDateBehavior: datePartOnly
+relationship efeb027d-400d-47be-57e0-c470254782c1
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
 	fromColumn: calendario.Data
-	toColumn: LocalDateTable_d3a0e8a0-04a0-45e5-a675-5a3674ed45f4.Date
+	toColumn: inscricoes_marketing.DATA_INSCRICAO
+
+relationship 1471f8df-2954-bfee-1672-445c6badf1cb
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: conclusoes.ID_INSCRICAO
+	toColumn: inscricoes_marketing.ID_INSCRICAO
 
